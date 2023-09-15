@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS styles -->
+    <style>
+        /* Style your website here */
+        body {
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-image: url('https://images.assettype.com/fortuneindia%2F2020-06%2Fef53f9be-f257-4aa3-9af5-6ca1a9f33a86%2Fclose_up_photography_of_leaves_with_droplets_807598.jpg?rect=0,607,4128,2322&w=1250&q=60');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #ff4880;
+        }
+
+        section {
+            padding: 2rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        /* Testimonial styles */
+        .testimonial-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            color: #333;
+        }
+
+        /* Additional CSS for Feminine Look */
+        h1, h2, h3 {
+            font-family: "Times New Roman", serif;
+            color: #ff69b4;
+        }
+
+        p {
+            color: #555;
+        }
+
+        /* Add more CSS as needed */
+
+        /* Smooth scroll behavior for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("contactButton").addEventListener("click", function () {
+                window.open("https://wa.me/+917857958020", "_blank");
+            });
+
+            // Instagram button click event
+            document.getElementById("instagramButton").addEventListener("click", function () {
+                window.open("https://www.instagram.com/digital_priya92/", "_blank");
+            });
+
+            // Testimonials data
+            const testimonials = [
+                {
+                    content: "Thanks to Women's Power, I learned valuable digital marketing skills and now run my online business successfully."
+                },
+                {
+                    content: "I can't believe how much my income has increased since joining Women's Power. The training is fantastic!"
+                },
+                {
+                    content: "Women's Power helped me gain confidence in the digital world. I'm now a freelance digital marketer and loving it!"
+                },
+            ];
+
+            // Display testimonials
+            const testimonialsContainer = document.getElementById("testimonials");
+            testimonials.forEach((testimonial, index) => {
+                const testimonialCard = document.createElement("div");
+                testimonialCard.classList.add("testimonial-card");
+                testimonialCard.innerHTML = `
+                    <p>${testimonial.content}</p>
+                `;
+                testimonialsContainer.appendChild(testimonialCard);
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>
+    
+    <title>Women's Power - Chlo Kuchh Nya Seekhte Hai</title>
+</head>
+<body>
+    <header>
+        <!-- You can replace this with your header content -->
+        <h1>Welcome to Women's Power</h1>
+        <h2>A platform for women to empower themselves digitally (chlo ladkiyo kuchh naya sikhte hai)</h2>
+        <button id="contactButton">Contact Us on WhatsApp</button>
+        <button id="servicesButton">Services</button>
+        <button id="blogButton">Blog</button>
+        <button id="instagramButton">Follow Us on Instagram</button>
+    </header>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p> A housewife turned digital marketer, is dedicated to empowering women through digital skills and expertise. She has helped numerous women earn well by harnessing the power of the internet.</p>
+    </section>
+
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <!-- Testimonial cards will be added here dynamically using JavaScript -->
+    </section>
+
+    <section id="certificates">
+        <h2>Certificates</h2>
+        <p>Helped many housewives become independent; their smiles are my certificates.</p>
+        <!-- Add a section for displaying certificates here -->
+    </section>
+
+    <section id="digitalEarning">
+        <h2>Digital Earning</h2>
+        <p>Explore opportunities for digital earning and financial independence:</p>
+        <ul>
+            <li><a href="#freelancing">Freelancing</a></li>
+            <li><a href="#onlineBusiness">Starting an Online Business</a></li>
+            <li><a href="#investing">Investing Wisely</a></li>
+            <li><a href="#financialLiteracy">Financial Literacy</a></li>
+        </ul>
+    </section>
+
+    <section id="freelancing">
+        <h2>Freelancing</h2>
+        <p>Learn how to kickstart your freelancing career and earn money on your terms.</p>
+        <!-- Add content about freelancing here -->
+    </section>
+
+    <section id="onlineBusiness">
+        <h2>Starting an Online Business</h2>
+        <p>Discover the steps to launch your online business and achieve financial independence.</p>
+        <!-- Add content about starting an online business here -->
+    </section>
+
+    <section id="investing">
+        <h2>Investing Wisely</h2>
+        <p>Explore smart investment strategies to secure your financial future.</p>
+        <!-- Add content about investing wisely here -->
+    </section>
+
+    <section id="financialLiteracy">
+        <h2>Financial Literacy</h2>
+        <p>Empower yourself with financial knowledge and make informed decisions.</p>
+        <!-- Add content about financial literacy here -->
+    </section>
+
+    <section id="thoughtsForGirls">
+        <h2>Why girls have to be self independent</h2>
+        <p>Girls, it's essential to be self-independent because:</p>
+        <ul>
+            <li>Independence boosts self-esteem and self-confidence.</li>
+            <li>Financial freedom allows you to pursue your dreams and passions.</li>
+            <li>It helps you make your own choices and decisions.</li>
+            <li>You become a role model for others and inspire change.</li>
+            <li>Being self-reliant means you're in control of your destiny.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Women's Power</p>
+    </footer>
+</body>
+</html>
